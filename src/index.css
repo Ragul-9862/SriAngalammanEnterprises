@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family:poppins;
+  src: url("../src/Assets/Poppins/Poppins-SemiBold.ttf");
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family:poppins !important  ;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,72 @@
+/* <----------------------------Navbar---------------------------------< */
+.navbar-expand-lg{
+  border-bottom: 1px solid rgb(145, 145, 145);
+  height: 110px;
+}
+.nav-link{
+  text-transform: uppercase;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  font-size: 18px;
+}
+.nav-link.active{
+border-bottom: 1px solid black;
+color: white;
+}
+.nav-link:hover{
+color: rgba(218,34,154,1);
+}
+.call-us{
+  border: 1px solid grey;
+  color: white;
+  padding: 15px;
+  width: 200px;
+  margin: 0 auto;
+text-align: center;
+background: linear-gradient(9deg, rgba(136,44,166,1) 42%, rgba(218,34,154,1) 58%);
+}
+
+/* <------------------------------------- Banner------------------------------------> */
+.Banner{
+  position: relative;
+}
+.Banner-slider {
+  width: 100%;
+  background-attachment: fixed;
+  background: url('../src/Assets/Images/Banner/homebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.custom-prev-arrow,
+.custom-next-arrow {
+  width: 50px;
+  height: 50px; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.custom-prev-arrow:before,
+.custom-next-arrow:before {
+  content: '';
+  border: solid white; /* Button arrow color */
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 8px;
+}
+
+.custom-prev-arrow {
+  left: 10px; /* Adjust position as needed */
+}
+
+.custom-next-arrow {
+  right: 10px; /* Adjust position as needed */
+  transform: rotate(-135deg);
+}
+
+
