@@ -204,7 +204,7 @@ background: url('../src/Assets/Images/Highlights/Highlights-bg.jpg');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-height: 75vh;
+/* height: 75vh; */
 width: 100%;
   text-align: center;
   padding-top: 80px;
@@ -272,7 +272,7 @@ font-weight: 900;
 .order-now-container {
   padding-top: 80px;
   padding-bottom: 80px;
-  height: 80vh;
+  /* height: 80vh; */
   background: url('../src/Assets/Images/Highlights/highlighsbg-2.jpg');
   background-position: center;
   background-size: cover;
