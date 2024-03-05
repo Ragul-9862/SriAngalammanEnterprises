@@ -35,7 +35,7 @@ background: linear-gradient(9deg, rgba(136,44,166,1) 42%, rgba(218,34,154,1) 58%
 }
 
 /* <------------------------------------- Banner------------------------------------> */
-.Banner{
+/* .Banner{
   position: relative;
 }
 .Banner-slider {
@@ -61,22 +61,93 @@ background: linear-gradient(9deg, rgba(136,44,166,1) 42%, rgba(218,34,154,1) 58%
 .custom-prev-arrow:before,
 .custom-next-arrow:before {
   content: '';
-  border: solid white; /* Button arrow color */
+  border: solid white; 
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 8px;
 }
 
 .custom-prev-arrow {
-  left: 10px; /* Adjust position as needed */
+  left: 10px; 
 }
 
 .custom-next-arrow {
-  right: 10px; /* Adjust position as needed */
+  right: 10px; 
   transform: rotate(-135deg);
 }
 .slick-next {
  display: none;
+} */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 900px; /* adjust height as needed */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../src/Assets/Images/Banner/homebg.jpg');
+  background-size: cover;
+  z-index: -1;
+}
+.slick-prev:before,
+.slick-next:before {
+content: none !important;
+}
+
+
+.carousel {
+  width: 100%;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+/* Customize navigation buttons */
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
+
+/* Customize dots */
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 300px; /* adjust height for mobile */
+  }
 }
 
 /* <----------------------------------------------------About Us-------------------------------------------------------> */

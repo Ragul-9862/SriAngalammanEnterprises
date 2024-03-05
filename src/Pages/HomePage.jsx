@@ -8,12 +8,14 @@ import About from '../Components/About'
 import Contact from '../Components/Contact'
 import Footer from '../Components/Footer'
 import Enquiry from '../Components/Enquiry'
+import BannerCarousel from '../Components/BannerCarosuel'
 
 export default function HomePage() {
   return (
     <div>
         <Navbar/>
-        <Banner/>
+        {/* <Banner/> */}
+        <BannerCarousel/>
         <About/>
         <Highlights/>
         <Products/>

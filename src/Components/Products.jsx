@@ -45,7 +45,7 @@ export default function Products() {
 
   return (
     <div>
-      <section className='products'>
+      <section className='products' id='Products'>
         <div className='products-heading'>
           <h1>OUR PRODUCTS</h1>
         </div>

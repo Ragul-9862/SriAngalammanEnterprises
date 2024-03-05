@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiAlignCenter, FiX } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-
     const [toggle, setToggle] = useState(false);
     const [activePage, setActivePage] = useState("Home");
+    const [navbarBg, setNavbarBg] = useState(false);
 
     const handleToggle = () => {
         setToggle(!toggle);
@@ -15,10 +15,25 @@ export default function Navbar() {
         setActivePage(page);
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 100) {
+                setNavbarBg(true);
+            } else {
+                setNavbarBg(false);
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
     return (
-        <nav className="navbar navbar-expand-lg fixed-top">
+        <nav id='Home' className={`navbar navbar-expand-lg fixed-top ${navbarBg ? 'bg-white' : ''}`}>
             <div className="container">
-                <a className="navbar-brand" href="#">Navbar</a>
+                <a className="navbar-brand" href="#Home">Navbar</a>
                 <button
                     className='navbar-toggler'
                     onClick={handleToggle}
@@ -37,55 +52,45 @@ export default function Navbar() {
                         <li className="nav-item">
                             <Link
                                 className={`nav-link ${activePage === "Home" ? "active" : ""}`}
-                                onClick={() => handleSetActivePage("Home")}
-                                href="#"
+                                onClick={() => {
+                                    handleSetActivePage("Home");
+                                    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+                                }}
                             >
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link
-                                className={`nav-link ${activePage === "About Us" ? "active" : ""}`}
-                                onClick={() => handleSetActivePage("About Us")}
-                                href="#"
+                                className={`nav-link ${activePage === "About" ? "active" : ""}`}
+                                onClick={() => {
+                                    handleSetActivePage("About");
+                                    document.getElementById("About").scrollIntoView({ behavior: "smooth" });
+                                }}
                             >
-                                About Us
+                                About
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link
-                                className={`nav-link ${activePage === "Gallery" ? "active" : ""}`}
-                                onClick={() => handleSetActivePage("Gallery")}
-                                href="#"
+                                className={`nav-link ${activePage === "Products" ? "active" : ""}`}
+                                onClick={() => {
+                                    handleSetActivePage("Products");
+                                    document.getElementById("Products").scrollIntoView({ behavior: "smooth" });
+                                }}
                             >
-                                Gallery
+                              Products
                             </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                className={`nav-link ${activePage === "Product Features" ? "active" : ""}`}
-                                onClick={() => handleSetActivePage("Product Features")}
-                                href="#"
-                            >
-                                Product Features
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className={`nav-link ${activePage === "Our Clients" ? "active" : ""}`}
-                                onClick={() => handleSetActivePage("Our Clients")}
-                                href="#"
-                            >
-                                Our Clients
-                            </a>
                         </li>
                         <li className="nav-item">
                             <Link
                                 className={`nav-link ${activePage === "Contact" ? "active" : ""}`}
-                                onClick={() => handleSetActivePage("Contact")}
-                                href="#"
+                                onClick={() => {
+                                    handleSetActivePage("Contact");
+                                    document.getElementById("Contact").scrollIntoView({ behavior: "smooth" });
+                                }}
                             >
-                                Contact
+                             Contact
                             </Link>
                         </li>
                     </ul>

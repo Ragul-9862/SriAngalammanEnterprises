@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Contact() {
     return (
-        <div className='contact-us'>
+        <div className='contact-us' id='Contact'>
             <section>
                 <div className='contact-heading'>
                     <h1>Contact Us</h1>
